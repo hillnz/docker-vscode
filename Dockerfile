@@ -60,3 +60,9 @@ EXPOSE 3000
 ENTRYPOINT ${OPENVSCODE_SERVER_ROOT}/server.sh
 
 # Customisation starts here
+USER root
+RUN apt-get update && apt-get install -y \
+    docker-compose \
+    git \
+    tldr
+USER $USERNAME
