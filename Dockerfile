@@ -1,6 +1,6 @@
 # TODO ditch stages once there are ARM builds https://github.com/gitpod-io/openvscode-server/issues/36
 
-FROM node:14-buster AS build
+FROM node:17-buster AS build
 
 # renovate: datasource=docker depName=gitpod/openvscode-server
 ARG VSCODE_VERSION=1.61.0
