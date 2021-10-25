@@ -61,8 +61,13 @@ ENTRYPOINT ${OPENVSCODE_SERVER_ROOT}/server.sh
 
 # Customisation starts here
 USER root
-RUN apt-get update && apt-get install -y \
-    docker-compose \
-    git \
-    tldr
-USER $USERNAME
+
+RUN apt-get update && DEBIAN_FRONTEND=noninteractive apt-get install -y \
+	curl \
+	docker \
+	docker-compose \
+	git \
+	tldr \
+	zsh
+
+USER openvscode-server
