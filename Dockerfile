@@ -3,7 +3,7 @@
 FROM node:14-buster AS build
 
 # renovate: datasource=docker depName=gitpod/openvscode-server
-ARG VSCODE_VERSION=1.61.0
+ARG VSCODE_VERSION=1.87.1
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
